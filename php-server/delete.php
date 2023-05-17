@@ -1,31 +1,21 @@
 <?phP
-session_start();//inicia a sessão.
+session_start(); 
 
-//verifica se o usuário está logado.
-if(!isset($_SESSION['user'])){
+if (!isset($_SESSION['user'])) {
     header('locatiom:../index.php');
     exit();
 }
 
-//adiciona os dados de sessãoo e do metodo get a uma variável.
-$user= $_SESSION['user'];
+$user = $_SESSION['user'];
 
-$key= $_GET["key"];
+$key = $_GET["key"];
 
-$itens= file('../csv/compras.csv');//adiciona os dados do arquivo csv a variável itens.
-$remove= $itens[$key];//seleciona o item a ser removido.
+$restaurants = file('../csv/restaurant.csv'); 
 
-//verifica se o suário que está tentando remover é o mesmo que está logado.
-if(trim(explode(",", $remove)[0])!=$user){
-    header('locatiom:../index.php');
-    exit();
-}
 
-$itens[$key]= "";//remove o item.
+$restaurants[$key] = "";
 
-$newitens= implode('', $itens);
-file_put_contents('../csv/compras.csv', $newitens);//reescreve o arquivo de itens no csv.  
+$newRestaurants = implode('', $restaurants);
+file_put_contents('../csv/restaurant.csv', $newRestaurants);  
 
-header('location:../logado.php');//redioreciona para a pagina já autenticada.
-       
-?>
+header('location:../logado.php');

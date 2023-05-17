@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/crud.css">
-    <title>CRUD</title>
+    <title>REGISTRE-SE</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
         <div id="menu">
             <nav>
-                <span>Lista de Tarefas</span>
+                <span>Lista de Restaurantes</span>
             </nav>
         </div>
 

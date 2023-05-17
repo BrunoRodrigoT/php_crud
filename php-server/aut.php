@@ -15,6 +15,7 @@ foreach ($registers as $register) {
     //verifica se os dados de login estão de acordo com o de registro.
 if($user==trim($un)&&$passwd==trim($pass)||$user==trim($e)&&$passwd==trim($pass)){
     //caso os dados estejam corretos, adiciona os dados do usuário a uma variável de sessão, e redireciona para pagina já autenticada.
+    $_SESSION['auth'] = true;
     $_SESSION["user"]= $un;
     header('location:../logado.php');
     exit();
@@ -24,7 +25,4 @@ if($user==trim($un)&&$passwd==trim($pass)||$user==trim($e)&&$passwd==trim($pass)
 
 //caso os dados estejam incorretos ou não constem como registrados, o programa redireciona com, um menssagem de erro para a página de login.
 
-header("location:../index.php?message=usúario ou senha incorretos&color=253, 204, 201")
-
-
-?>
+header("location:../index.php?message=usúario ou senha incorretos&color=253, 204, 201");

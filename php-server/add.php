@@ -1,22 +1,24 @@
 <?php
-session_start();//inicia a sessão para utilização dos dados registrados na global de sessão.
+session_start(); 
 
-//verifica se o usuário está autenticado, caso não, redireciona para página de login.
-if(!isset($_SESSION['user'])){
+if (!isset($_SESSION['user'])) {
     header('locatiom:../index.php');
     exit();
-} 
+}
 
 //recebe os dados da sessão e do formulário.
-$user= $_SESSION['user'];
-$item= $_POST['item'];
+$user = $_SESSION['user'];
+$restaurant = $_POST['restaurant'];
+$location = $_POST['location'];
+$type = $_POST['type'];
+$amount = $_POST['amount'];
 
-$newitem= $user.','.$item ."\n";//concatena o usúario e o item por questões de segurança e privacidade.
 
-$fp= fopen('../csv/compras.csv', 'a');
-fwrite($fp, $newitem);//adiciona no arquivo csv.
-fclose($fp);//fecha o arquivo.
+$newRestaurant = $user . ',' . $restaurant . ',' . $location . ',' . $type . ',' . $amount . "\n"; //concatena o usúario e o restaurant por questões de segurança e privacidade.
 
-header('location:../logado.php')
+$fp = fopen('../csv/restaurant.csv', 'a');
+fwrite($fp, $newRestaurant); //adiciona no arquivo csv.
+fclose($fp); //fecha o arquivo.
+
+header('location:../logado.php');
 //Redireciona para a página autenticada.
-?>
