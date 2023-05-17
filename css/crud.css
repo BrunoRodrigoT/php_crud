@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-color: #0e0e0e;
+  padding-top: 48px;
+  font-family: "Roboto", sans-serif;
+}
+
+div#screen {
+  max-width: 800px;
+  min-height: 570px;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+div#menu {
+  background-color: #38045e;
+  height: 35px;
+  margin-top: -20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+div#message {
+  width: 205px;
+  height: 20px;
+  margin: auto auto auto 95px;
+  text-align: center;
+  border: 0.5px solid rgba(36, 11, 80, 0.3);
+}
+
+form {
+  margin: auto;
+  margin-top: 130px;
+  height: 265px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+form#add {
+  margin: auto;
+  margin-top: 30px;
+  height: 250px;
+  max-width: 400px;
+}
+
+div#list {
+  margin: auto;
+  margin-top: 10px;
+  max-width: 80%;
+}
+
+tr {
+  width: 80%;
+  background: #71717148;
+}
+
+td {
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+td#delete {
+  width: 20%;
+  background-color: white;
+  padding: 10px;
+}
+
+td#delete:hover {
+  background-color: #86efad7e;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #38045e;
+  margin-top: 0px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+h2 {
+  background-color: #38045e;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  border-radius: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+  color: #0e0e0e;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #0e0e0e;
+}
+
+span {
+  color: white;
+  margin-left: 12px;
+  text-align: center;
+  font-size: 25px;
+}
+
+span#user {
+  font-size: 25px;
+  float: right;
+  margin-right: 12px;
+}
+
+span#user span {
+  color: rgb(74, 170, 90);
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+span#user a {
+  color: white;
+  font-size: 23px;
+}
+
+span#user a:hover {
+  color: rgb(74, 170, 90);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+  width: 80%;
+}
+
+input {
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  background-color: #71717115;
+  box-shadow: 0px 1px 2px #0000002a;
+}
+
+input:hover {
+  background-color: #71717125;
+}
+
+input.button {
+  width: 60%;
+  margin: auto;
+  border: none;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #71717115;
+}
+
+button.register {
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  width: 60%;
+  margin: auto;
+}
